@@ -1,0 +1,3 @@
+[run]
+source = dingen_pyramid
+omit = dingen_pyramid/test*
