@@ -15,8 +15,6 @@ from ..models import (
     get_session_factory,
     get_tm_session,
     )
-from ..models import MyModel
-
 
 def usage(argv):
     cmd = os.path.basename(argv[0])
@@ -40,6 +38,3 @@ def main(argv=sys.argv):
 
     with transaction.manager:
         dbsession = get_tm_session(session_factory, transaction.manager)
-
-        model = MyModel(name='one', value=1)
-        dbsession.add(model)
