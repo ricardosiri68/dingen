@@ -11,6 +11,7 @@ dist/
 .cache/
 development.ini
 production.ini
+alembic.ini
 .tox/
 nosetests.xml
 __pycache__/

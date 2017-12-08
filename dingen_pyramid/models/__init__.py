@@ -5,12 +5,20 @@ import zope.sqlalchemy
 
 # import or define all models here to ensure they are attached to the
 # Base.metadata prior to any initialization routines
-from .mymodel import MyModel  # flake8: noqa
 
 # run configure_mappers after defining all of the models to ensure
 # all relationships can be setup
 configure_mappers()
 
+
+__all__ = []
+
+def export_model(defn):
+
+    globals()[defn.__name__] = defn
+    __all__.append(defn.__name__)
+
+    return defn
 
 def get_engine(settings, prefix='sqlalchemy.'):
     return engine_from_config(settings, prefix)
@@ -75,3 +83,5 @@ def includeme(config):
         'dbsession',
         reify=True
     )
+
+from . import blog
