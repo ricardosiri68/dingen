@@ -15,6 +15,8 @@ alembic.ini
 .tox/
 nosetests.xml
 __pycache__/
+node_modules/
+dingen_pyramid/static/
 bin/
 share/
 include/
