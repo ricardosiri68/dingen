@@ -1,0 +1,18 @@
+{% extends "base/index.jinja2" %}
+
+
+{% block banner %}
+  {% if advance_search %}
+      {% include "partials/advance_search.jinja2" %}
+  {% endif %}
+{% endblock %}
+
+{% block content %}
+  <div class="columns">
+    <div class="column is-three-quarters-desktop">
+      {% include "partials/index_list.jinja2" %}
+      {% include "partials/paginator.jinja2" %}
+    </div>
+    {% include "partials/advertising.jinja2" %}
+  </div>
+{% endblock %}

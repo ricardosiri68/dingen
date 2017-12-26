@@ -1,11 +1,11 @@
 <nav class="navbar is-primary" role="navigation" aria-label="main navigation">
   <div class="navbar-brand">
-    <a class="navbar-item" href="/">
+    <span class="navbar-item">
       <img src="/static/images/logo.png" alt="Dingen: A new way of see IT" width="28" height="28">
       &nbsp;
       Dingen
-    </a>
-    <button class="button navbar-burger">
+    </span>
+    <button class="button navbar-burger is-primary">
       <span></span>
       <span></span>
       <span></span>
@@ -13,16 +13,18 @@
   </div>
   <div class="navbar-menu">
     <div class="navbar-start">
-      <form class="navbar-item" action="/es-ar/blog/search/" method="GET">
-        <div class="field">
-          <p class="control has-icons-left">
-          <input name="term" class="input" placeholder="Buscar" value="" type="text">
-          <span class="icon is-small is-left">
-            <i class="fa fa-search"></i>
-          </span>
-          </p>
-        </div>
-      </form>
+      {% if not advance_search %}
+       <form class="navbar-item" action="/search" method="GET">
+          <div class="field">
+            <p class="control has-icons-left">
+            <input name="term" class="input" placeholder="Buscar" value="" type="text">
+            <span class="icon is-small is-left">
+              <i class="fa fa-search"></i>
+            </span>
+            </p>
+          </div>
+        </form>
+      {% endif %}
     </div>
     <div class="navbar-end">
       <a class="navbar-item" href="/home.html">
@@ -31,7 +33,7 @@
       <a class="navbar-item" href="/trending.html">
         Trending
       </a>
-      <a class="navbar-item" href="#">
+      <a class="navbar-item" href="/search?advanced=on">
         Advance Search
       </a>
       <a class="navbar-item" href="/about_us.html">
