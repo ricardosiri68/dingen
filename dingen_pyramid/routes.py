@@ -4,3 +4,4 @@ def includeme(config):
     config.add_route('home', '/')
     config.add_route('page', '/{action}.html')
     config.add_route('search', '/search')
+    config.add_route('entry', '/entry/{entry_id}/{slug}.html')
