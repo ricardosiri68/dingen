@@ -1,10 +1,13 @@
-from pyramid.response import Response
+"""
+search view module
+"""
 from pyramid.view import view_config
 
-from sqlalchemy.exc import DBAPIError
 
-
-@view_config(route_name='search', request_method="GET", renderer='../templates/search_results.jinja2')
+@view_config(
+    route_name='search',
+    request_method="GET",
+    renderer='../templates/search_results.jinja2')
 def search_view(request):
     ''' Search action and rendering search result view
     '''

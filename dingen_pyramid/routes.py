@@ -1,4 +1,12 @@
+"""
+routes configuration module
+"""
+
+
 def includeme(config):
+    """
+    module inclusion function to manage the route configuration
+    """
     config.add_static_view('static', 'static', cache_max_age=3600)
 
     config.add_route('home', '/')

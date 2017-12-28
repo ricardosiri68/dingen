@@ -1,3 +1,6 @@
+"""
+sqlalchemy models metadata configuration and naming conventions
+"""
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.schema import MetaData
 
