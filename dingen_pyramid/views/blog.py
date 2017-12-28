@@ -17,3 +17,15 @@ def entry_view(request):
     '''
 
     return {}
+
+
+@view_config(
+    route_name='tag',
+    request_method="GET",
+    renderer='../templates/tag_results.jinja2'
+)
+def tag_view(request):
+    """
+    Shows the entries related to a single tag
+    """
+    return {}

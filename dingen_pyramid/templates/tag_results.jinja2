@@ -1,0 +1,17 @@
+
+{% extends "base/index.jinja2" %}
+
+
+{% block content %}
+  <div class="columns">
+    <div class="column is-three-quarters-desktop">
+      <h1 class="title is-2">
+        Results of the tag: 
+        <span class="has-text-info">some tag</span>
+      </h1>
+      {% include "partials/index_list.jinja2" %}
+      {% include "partials/paginator.jinja2" %}
+    </div>
+    {% include "partials/advertising.jinja2" %}
+  </div>
+{% endblock %}
