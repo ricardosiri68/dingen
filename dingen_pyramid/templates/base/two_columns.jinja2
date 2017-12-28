@@ -1,0 +1,14 @@
+{% extends 'index.jinja2' %}
+
+{% block content %}
+  <div class="columns">
+    <div class="column is-three-quarters-desktop">
+      {% block left_column_content %}
+      {% endblock %}
+    </div>
+    <div class="column is-hidden-touch">
+      {% block right_column_content %}
+      {% endblock %}
+    </div>
+  </div>
+{% endblock %}
