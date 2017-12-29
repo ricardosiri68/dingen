@@ -15,6 +15,10 @@ def includeme(config):
     config.add_route('entry', '/entry/{entry_id}/{slug}.html')
     config.add_route('tag', '/tag/{tag_id}/{slug}.html')
 
+    # ACCESS MANAGMENT
+    config.add_route('login', '/login')
+    config.add_route('logout', '/logout')
+
     # CONTENT MANAGEMENT
     # config.add_route('profile', '/d/{username}')
     # # action=create|edit|delete
