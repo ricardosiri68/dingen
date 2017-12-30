@@ -4,8 +4,6 @@
   <h1 class="title is-1">
     Lorem voluptate adipisci deleniti nemo non sequi.
     <small class="is-size-4 has-text-grey-light">14 de julio</small>
-    <small class="is-size-7 has-text-grey-lighter">by</small>
-    <a href="#" class="is-size-3 has-text-info">@someuser</a>
   </h1>
   <div class="content">
     <h1>Hello World</h1>
@@ -101,6 +99,10 @@
 {% endblock %}
 
 {% block right_column_content %}
+  <h4 class="title is-4 has-text-grey-light">posted by</h4>
+  {% include "partials/user_profile_card.jinja2" %}
+  <hr>
   {% include "partials/advertising.jinja2" %}
+  <hr>
   {% include "partials/tag_cloud.jinja2" %}
 {% endblock %}
