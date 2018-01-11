@@ -36,6 +36,19 @@ def user_profile_view(request):
 )
 def edit_profile_view(request):
     """
-    show the form to edit the user profile
+    shows the form to edit the user profile
+    """
+    return {}
+
+
+@view_config(
+    route_name='profile_action',
+    request_method='GET',
+    match_param="action=changepassword",
+    renderer='../templates/users/change_password.jinja2'
+)
+def change_password_view(request):
+    """
+    shows the form to change the user password
     """
     return {}
