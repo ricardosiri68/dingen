@@ -26,3 +26,16 @@ def user_profile_view(request):
     shows user profile
     """
     return {}
+
+
+@view_config(
+    route_name='profile_action',
+    request_method='GET',
+    match_param="action=edit",
+    renderer='../templates/users/edit_profile.jinja2'
+)
+def edit_profile_view(request):
+    """
+    show the form to edit the user profile
+    """
+    return {}
