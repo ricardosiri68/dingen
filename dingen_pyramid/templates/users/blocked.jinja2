@@ -1,0 +1,64 @@
+{% extends "../base/two_columns.jinja2" %}
+
+{% block left_column_content %}
+  <h2 class="title is-2">Blocked Users</h2>
+  <div class="columns is-centered">
+    <div class="column is-three-quarters is-hidden-mobile">
+      {% for i in range(10) %}
+        <div class="box is-hidden-mobile">
+          <div class="media">
+            <figure class="media-left image is-64x64">
+              <img src="http://bulma.io/images/placeholders/128x128.png">
+            </figure>
+            <div class="media-content">
+              <div class="content">
+                <h3 class="title is-4">
+                  <a class="has-text-info" href="/d/someusername">
+                    @someusername
+                  </a>
+                  <a class="button is-warning pull-right" href="/d/username/unblock">
+                    <span class="icon is-small">
+                      <i class="fa fa-unlock-alt"></i>
+                    </span>
+                    <span>
+                      Unblock
+                    </span>
+                  </a>
+                </h3>
+                <small>is joined to dingen since junio 15, 2017</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+    <div class="column is-hidden-tablet">
+      <nav class="panel">
+        {% for i in range(10) %}
+          <span class="panel-block">
+            <span class="panel-icon">
+              <i class="fa fa-user"></i>
+            </span>
+            <a class="has-text-info" href="/d/someusername">
+              @someusername
+            </a>
+            &nbsp;
+            &nbsp;
+            <a class="button is-warning pull-right" href="/d/username/unblock">
+              <span class="icon is-small">
+                <i class="fa fa-unlock-alt"></i>
+              </span>
+            </a>
+          </span>
+        {% endfor %}
+      </nav>
+    </div>
+  </div>
+  {% include "../partials/paginator.jinja2" %}
+{% endblock %}
+
+{% block right_column_content %}
+  {% include "../partials/user_profile_card.jinja2" %}
+  <hr>
+  {% include "../partials/advertising.jinja2" %}
+{% endblock %}

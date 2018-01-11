@@ -52,3 +52,16 @@ def change_password_view(request):
     shows the form to change the user password
     """
     return {}
+
+
+@view_config(
+    route_name='profile_action',
+    request_method='GET',
+    match_param="action=blocked",
+    renderer='../templates/users/blocked.jinja2'
+)
+def blocked_view(request):
+    """
+    shows the list of blocked users of the current user
+    """
+    return {}
