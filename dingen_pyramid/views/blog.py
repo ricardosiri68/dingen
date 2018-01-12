@@ -10,7 +10,7 @@ from pyramid.view import view_config
 @view_config(
     route_name='entry',
     request_method="GET",
-    renderer='../templates/show_entry.jinja2'
+    renderer='../templates/entries/show.jinja2'
 )
 def entry_view(request):
     ''' Shows the full content of the entry
