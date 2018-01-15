@@ -22,8 +22,9 @@ def includeme(config):
     # CONTENT MANAGEMENT
     config.add_route('profile', '/d/{username}')
     config.add_route('profile_action', '/d/{username}/{action}')
-    # # action=create|edit|delete
-    # config.add_route('profile_entries', '/d/{username}/entries/{action}')
+
+    # action=create|edit|delete
+    config.add_route('profile_entries', '/d/{username}/entries/{action}')
     #
     # # moderation: disable|enable|delete -> entries, users and tags
     # config.add_route('moderate', '/mod/{controller}/{action}')

@@ -29,3 +29,16 @@ def tag_view(request):
     Shows the entries related to a single tag
     """
     return {}
+
+
+@view_config(
+    route_name='profile_entries',
+    match_param='action=create',
+    request_method='GET',
+    renderer='../templates/entries/create.jinja2'
+)
+def create_entry_view(request):
+    """
+    shows create a new entry form
+    """
+    return {}
