@@ -1,3 +1,6 @@
+"""
+blog models definitions
+"""
 from sqlalchemy import (
     Column,
     Index,

@@ -1,0 +1,45 @@
+<form action="/d/someusername/entries/create" method="post">
+  <div class="field">
+    <div class="control">
+      <input class="input is-large" type="text" placeholder="Put here some title for the article" tabindex=1>
+    </div>
+  </div>
+  {% include "markdown_editor.jinja2" %}
+  <div class="field">
+    <div class="control">
+      <input class="input" type="text" placeholder="Here go some tags that describe the article" tabindex=3>
+    </div>
+  </div>
+  <div class="field is-grouped pull-right">
+    <div class="control">
+      <button class="button is-info">
+        <span class="icon is-small">
+          <i class="fa fa-save"></i>
+        </span>
+        <span>
+          Save
+        </span>
+      </button>
+    </div>
+    <div class="control">
+      <button class="button">
+        <span class="icon is-small">
+          <i class="fa fa-eye"></i>
+        </span>
+        <span>
+          Preview
+        </span>
+      </button>
+    </div>
+    <div class="control">
+      <button class="button is-success">
+        <span class="icon is-small">
+          <i class="fa fa-send"></i>
+        </span>
+        <span>
+          Publish
+        </span>
+      </button>
+    </div>
+  </div>
+</form>

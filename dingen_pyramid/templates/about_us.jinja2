@@ -1,0 +1,47 @@
+{% extends "base/two_columns.jinja2" %}
+
+{% block left_column_content %}
+  <h1 class="title is-1">Acerca de nosotros</h1>
+  <div class="content">
+    <strong>
+      Adipisicing saepe corrupti aut minus consectetur Vero expedita recusandae voluptatum iste explicabo? Inventore dignissimos autem et assumenda possimus voluptates Deleniti mollitia qui neque mollitia laborum aperiam Sed quasi odio impedit facere error. Iure voluptates laudantium minima iste molestias. Veniam eligendi neque nihil omnis autem iste repellendus Veritatis laborum itaque odio atque ducimus sequi Vel molestiae cum itaque voluptates officia consequatur Sapiente veritatis molestias quam maxime fugiat Iste tenetur quod at alias facere nemo fugit Sequi illum ab aperiam quos obcaecati Quidem vitae aspernatur expedita quod exercitationem dignissimos labore corrupti Ipsa commodi autem exercitationem expedita dolorum perspiciatis! Quidem facere soluta harum similique rerum, quidem. Eius magni eaque vel temporibus vero beatae Enim soluta culpa unde ipsum labore Totam tenetur voluptatem deleniti itaque illum. Cupiditate repudiandae nemo minus a blanditiis Quod exercitationem est delectus beatae dicta. Sed ab voluptate a sint natus. Numquam suscipit explicabo sint iusto blanditiis. Labore aspernatur libero dolores
+    </strong>
+    <h1>Nuestro equipo</h1>
+    <article class="media">
+      <figure class="media-left">
+        <p class="image is-128x128">
+        <img src="http://bulma.io/images/placeholders/128x128.png">
+        </p>
+      </figure>
+      <div class="media-content">
+        <div class="content">
+          <p>
+          <strong>John Smith</strong> <small>@johnsmith</small> <small>31m</small>
+          <br>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.
+          </p>
+        </div>
+      </div>
+    </article>
+    <article class="media">
+      <figure class="media-left">
+        <p class="image is-128x128">
+        <img src="http://bulma.io/images/placeholders/128x128.png">
+        </p>
+      </figure>
+      <div class="media-content">
+        <div class="content">
+          <p>
+          <strong>Jane Doe</strong> <small>@janedoe</small> <small>26m</small>
+          <br>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.
+          </p>
+        </div>
+      </div>
+    </article>
+  </div>
+{% endblock %}
+
+{% block right_column_content %}
+  {% include 'partials/advertising.jinja2' %}
+{% endblock %}

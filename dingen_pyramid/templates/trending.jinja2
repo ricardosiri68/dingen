@@ -1,0 +1,27 @@
+{% extends 'base/two_columns.jinja2' %}
+
+{% block left_column_content %}
+  <h1 class="title is-1">Entradas mas aclamadas</h1>
+  <div class="tabs is-hidden-mobile">
+    <ul>
+      <li class="is-active"><a>or this week</a></li>
+      <li><a>del mes</a></li>
+      <li><a>del año</a></li>
+    </ul>
+  </div>
+
+  <div class="tabs is-hidden-tablet">
+    <ul>
+      <li class="is-active"><a>semana</a></li>
+      <li><a>mes</a></li>
+      <li><a>año</a></li>
+    </ul>
+  </div>
+  {% include "partials/index_list.jinja2" %}
+{% endblock %}
+
+{% block right_column_content %}
+  {% include "partials/advertising.jinja2" %}
+  <hr>
+  {% include "partials/tag_cloud.jinja2" %}
+{% endblock %}

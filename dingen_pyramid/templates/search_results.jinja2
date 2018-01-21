@@ -1,0 +1,19 @@
+{% extends "base/two_columns.jinja2" %}
+
+
+{% block banner %}
+  {% if advance_search %}
+      {% include "partials/advance_search.jinja2" %}
+  {% endif %}
+{% endblock %}
+
+{% block left_column_content %}
+  {% include "partials/index_list.jinja2" %}
+  {% include "partials/paginator.jinja2" %}
+{% endblock %}
+
+{% block right_column_content %}
+  {% include "partials/advertising.jinja2" %}
+  <hr>
+  {% include "partials/tag_cloud.jinja2" %}
+{% endblock %}

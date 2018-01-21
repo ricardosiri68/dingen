@@ -1,0 +1,66 @@
+<nav class="navbar is-primary" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <span class="navbar-item">
+      <img src="/static/images/logo.png" alt="Dingen: A new way of see IT" width="28" height="28">
+      &nbsp;
+      Dingen
+    </span>
+    <button class="button navbar-burger is-primary">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+  <div class="navbar-menu">
+    <div class="navbar-start">
+      {% if not advance_search %}
+       <form class="navbar-item" action="/search" method="GET">
+          <div class="field">
+            <p class="control has-icons-left">
+            <input name="term" class="input" placeholder="Buscar" value="" type="text">
+            <span class="icon is-small is-left">
+              <i class="fa fa-search"></i>
+            </span>
+            </p>
+          </div>
+        </form>
+      {% endif %}
+    </div>
+    <div class="navbar-end">
+      <a class="navbar-item" href="/home.html">
+        Home
+      </a>
+      <a class="navbar-item" href="/trending.html">
+        Trending
+      </a>
+      <a class="navbar-item" href="/search?advanced=on">
+        Advance Search
+      </a>
+      <a class="navbar-item" href="/about_us.html">
+        About us
+      </a>
+      {#
+      <span class="navbar-item has-dropdown is-active">
+        <span class="navbar-link">
+          <span class="icon is-small">
+            <i class="fa fa-user"></i>
+          </span>
+          &nbsp;
+          @username
+        </span>
+        <div class="navbar-dropdown is-right">
+          <a class="navbar-item">
+            Edit Profile Info
+          </a>
+          <a class="navbar-item">
+            Your entries
+          </a>
+          <a class="navbar-item">
+            Blocked users
+          </a>
+        </div>
+      </span>
+      #}
+    </div>
+  </div>
+</nav>

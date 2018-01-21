@@ -1,0 +1,35 @@
+{% extends "base/index.jinja2" %}
+
+
+{% block header %}
+  {% include "base/clean_header.jinja2" %}
+{% endblock %}
+
+{% block content %}
+<div class="columns is-mobile is-centered">
+  <form class="column is-one-third-tablet" method="POST" action="/login">
+    <div class="field">
+      <label class="label">email</label>
+      <div class="control">
+        <input class="input" type="text" name="email" placeholder="somename@example.com">
+      </div>
+    </div>
+    <div class="field">
+      <label class="label">password</label>
+      <div class="control">
+        <input class="input" type="password" name="password" placeholder="****************">
+      </div>
+    </div>
+    <div class="field">
+      <div class="control">
+        <button class="button is-success is-pulled-right">Login</button>
+      </div>
+    </div>
+    <a href="/recover_password">forgot your password?</a>
+  </form>
+</div>
+{% endblock %}
+
+{% block footer %}
+  
+{% endblock %}
