@@ -23,8 +23,11 @@ def includeme(config):
     config.add_route('profile', '/d/{username}')
     config.add_route('profile_action', '/d/{username}/{action}')
 
-    # action=create|edit|delete
-    config.add_route('profile_entries', '/d/{username}/entries/{action}')
+    # action=create|edit|delete entry=_|(integer)
+    config.add_route(
+        'profile_entries',
+        '/d/{username}/{entry}/entries/{action}'
+    )
     #
     # # moderation: disable|enable|delete -> entries, users and tags
     # config.add_route('moderate', '/mod/{controller}/{action}')

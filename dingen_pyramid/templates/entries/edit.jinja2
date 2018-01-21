@@ -1,11 +1,13 @@
 {% extends "../base/two_columns.jinja2" %}
 
+
 {% block left_column_content %}
-  <h2 class="title is-2">Create a new entry !</h2>
+  <h2 class="title is-2">Editing entry...</h2>
   {% include "../partials/entry_form.jinja2" %}
 {% endblock %}
 
 {% block right_column_content %}
+  <h4 class="title is-4 has-text-grey-light">posted by</h4>
   {% include "../partials/user_profile_card.jinja2" %}
   {# here could may some actions #}
   <hr>
