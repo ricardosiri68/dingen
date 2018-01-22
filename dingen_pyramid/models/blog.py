@@ -46,6 +46,7 @@ class Entry(Base):
         secondary=entries__tags_REL_TABLE,
         back_populates='entries'
     )
+    visits = relationship('Visit', back_populates='entry')
 
 
 @export_model
@@ -64,6 +65,19 @@ class Tag(Base):
         secondary=entries__tags_REL_TABLE,
         back_populates='tags'
     )
+
+
+@export_model
+class Visist(Base):
+    """
+    Mapper for the visit of a entry
+    """
+
+    __tablename__ = 'visits'
+
+    id = Column(Integer, primary_key=True)
+    entry_id = Column(Integer, ForeignKey('entries.id'))
+    created_at = Column(DateTime, nullable=False)
 
 
 Index('entries_index', Entry.title, unique=True, mysql_length=255)
