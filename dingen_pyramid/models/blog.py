@@ -76,8 +76,9 @@ class Visist(Base):
     __tablename__ = 'visits'
 
     id = Column(Integer, primary_key=True)
-    entry_id = Column(Integer, ForeignKey('entries.id'))
+    entry_id = Column(Integer, ForeignKey('entries.id'), unique=True)
     created_at = Column(DateTime, nullable=False)
 
 
-Index('entries_index', Entry.title, unique=True, mysql_length=255)
+Index('entries_index', Entry.title, unique=False, mysql_length=255)
+Index('tag_index', Tag.text_data, unique=True, mysql_length=64)
