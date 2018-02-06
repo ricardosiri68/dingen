@@ -4,7 +4,9 @@ attrs==17.3.0
 beautifulsoup4==4.6.0
 coverage==4.4.2
 decorator==4.1.2
--e git+git@github.com:ricardosiri68/dingen-pyramid.git@313de467f41295f62540a43070627307e76fb3da#egg=dingen_pyramid
+-e git+git@github.com:ricardosiri68/dingen-pyramid.git@9605ea8fc6d0c5c7c1a88ba0d8e52c58e117e036#egg=dingen_pyramid
+factory-boy==2.9.2
+Faker==0.8.10
 flake8==3.5.0
 hupper==1.0
 ipdb==0.10.3
@@ -46,6 +48,7 @@ repoze.lru==0.7
 simplegeneric==0.8.1
 six==1.11.0
 SQLAlchemy==1.1.15
+text-unidecode==1.1
 traitlets==4.3.2
 transaction==2.1.2
 translationstring==1.3
