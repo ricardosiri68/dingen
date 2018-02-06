@@ -39,7 +39,7 @@ class Entry(Base):
     body_markdown = Column(Text, nullable=False)
     body_html = Column(Text, nullable=False)
     created_at = Column(DateTime, nullable=False)
-    update_at = Column(DateTime, nullable=False)
+    updated_at = Column(DateTime, nullable=False)
 
     tags = relationship(
         'Tag',
@@ -68,7 +68,7 @@ class Tag(Base):
 
 
 @export_model
-class Visist(Base):
+class Visit(Base):
     """
     Mapper for the visit of a entry
     """
@@ -76,8 +76,10 @@ class Visist(Base):
     __tablename__ = 'visits'
 
     id = Column(Integer, primary_key=True)
-    entry_id = Column(Integer, ForeignKey('entries.id'), unique=True)
+    entry_id = Column(Integer, ForeignKey('entries.id'))
     created_at = Column(DateTime, nullable=False)
+
+    entry = relationship('Entry', back_populates='visits')
 
 
 Index('entries_index', Entry.title, unique=False, mysql_length=255)

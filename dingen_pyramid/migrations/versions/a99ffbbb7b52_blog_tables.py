@@ -24,7 +24,7 @@ def upgrade():
     sa.Column('body_markdown', sa.Text(), nullable=False),
     sa.Column('body_html', sa.Text(), nullable=False),
     sa.Column('created_at', sa.DateTime(), nullable=False),
-    sa.Column('update_at', sa.DateTime(), nullable=False),
+    sa.Column('updated_at', sa.DateTime(), nullable=False),
     sa.PrimaryKeyConstraint('id', name=op.f('pk_entries'))
     )
     op.create_index('entries_index', 'entries', ['title'], unique=False, mysql_length=255)
@@ -46,8 +46,6 @@ def upgrade():
     sa.Column('created_at', sa.DateTime(), nullable=False),
     sa.ForeignKeyConstraint(['entry_id'], ['entries.id'], name=op.f('fk_visits_entry_id_entries')),
     sa.PrimaryKeyConstraint('id', name=op.f('pk_visits')),
-    sa.UniqueConstraint('entry_id', name=op.f('uq_visits_entry_id'))
-    )
     # ### end Alembic commands ###
 
 
