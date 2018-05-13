@@ -46,6 +46,7 @@ def upgrade():
     sa.Column('created_at', sa.DateTime(), nullable=False),
     sa.ForeignKeyConstraint(['entry_id'], ['entries.id'], name=op.f('fk_visits_entry_id_entries')),
     sa.PrimaryKeyConstraint('id', name=op.f('pk_visits')),
+    )
     # ### end Alembic commands ###
 
 
