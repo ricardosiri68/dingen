@@ -55,6 +55,7 @@ setup(
         ],
         'console_scripts': [
             'initialize_dingen_pyramid_db = dingen_pyramid.scripts.initializedb:main',
+            'dbseeder = dingen_pyramid.scripts.dbseeder:main',
         ],
     },
 )
