@@ -3,10 +3,12 @@
 		"target": "es5",
 		"strict": true,
 		"module": "es2015",
-		"moduleResolution": "node",
-		"experimentalDecorators": true
+		"moduleResolution": "node"
 	},
 	"include": [
 		"dingen_pyramid/resources/ts/**/*"
-    ]
+	],
+	"exclude": [
+		"node_modules"
+	]
 }
