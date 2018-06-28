@@ -21,10 +21,15 @@
   },
   "homepage": "https://github.com/ricardosiri68/dingen-pyramid#readme",
   "devDependencies": {
-    "laravel-mix": "^1.7.2"
+    "laravel-mix": "^2.1"
   },
   "dependencies": {
     "bulma": "^0.6.1",
-    "font-awesome": "^4.7.0"
+    "font-awesome": "^4.7.0",
+    "ts-loader": "^4.4.2",
+    "typescript": "^2.9.2",
+    "vue": "^2.5.16",
+    "vue-cli": "^2.9.6",
+    "vue-loader": "^15.2.4"
   }
 }
