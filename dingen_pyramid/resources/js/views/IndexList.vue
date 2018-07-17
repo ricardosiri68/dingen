@@ -1,14 +1,14 @@
+<template>
 <div class="columns">
 
   <div class="column is-hidden-mobile">
-    {% for i in range(15) %}
-      <div class="box is-hidden-mobile">
+      <div class="box is-hidden-mobile" v-for="n in 15">
         <div class="media">
           <div class="media-content">
             <div class="content">
               <h3 class="title is-4">
                 <a class="has-text-primary" href="/es-ar/blog/show/5/">
-                  ipsum consectetur ipsam nulla aliquid!
+                  ipsum consectetur ipsam nulla aliquid!!!!
                 </a>
               </h3>
               <small>junio 15, 2017</small>
@@ -54,12 +54,10 @@
           </figure>
         </div>
       </div>
-    {% endfor %}
   </div>
 
   <div class="column is-hidden-tablet">
-    {% for i in range(10) %}
-      <div class="card">
+      <div class="card" v-for="n in 10">
         <div class="card-image">
           <figure class="image is-2by1">
             <img src="http://bulma.io/images/placeholders/1280x960.png" alt="Image">
@@ -69,7 +67,7 @@
           <div class="content">
             <h5 class="title is-5">
               <a class="has-text-primary" href="/es-ar/blog/show/5/">
-                Ipsum consectetur ipsam nulla aliquid!
+                Ipsum consectetur ipsam nulla aliquid!!!!
               </a>
             </h5>
             <small>Junio 15, 2017</small>
@@ -110,7 +108,6 @@
           </span>
         </footer>
       </div>
-    {% endfor %}
-
   </div>
 </div>
+</template>

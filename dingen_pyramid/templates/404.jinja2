@@ -1,8 +1,19 @@
-{% extends "layout.jinja2" %}
+{% extends "base/index.jinja2" %}
+
+{% block header %}
+<nav class="navbar is-primary" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <span class="navbar-item">
+      <img src="/static/images/logo.png" alt="Dingen: A new way of see IT" width="28" height="28">
+      &nbsp;
+      Dingen
+    </span>
+  </div>
+</nav>
+{% endblock header %}
 
 {% block content %}
 <div class="content">
-  <h1><span class="font-semi-bold">Pyramid</span> <span class="smaller">Alchemy scaffold</span></h1>
-  <p class="lead"><span class="font-semi-bold">404</span> Page Not Found</p>
+  <h1><span class="font-semi-bold"><span class="font-semi-bold">404</span> Page Not Found</h1>
 </div>
 {% endblock content %}
