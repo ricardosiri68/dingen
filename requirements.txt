@@ -4,7 +4,6 @@ attrs==17.3.0
 beautifulsoup4==4.6.0
 coverage==4.4.2
 decorator==4.1.2
--e git+git@github.com:ricardosiri68/dingen-pyramid.git@9605ea8fc6d0c5c7c1a88ba0d8e52c58e117e036#egg=dingen_pyramid
 factory-boy==2.9.2
 Faker==0.8.10
 flake8==3.5.0
@@ -23,8 +22,9 @@ parso==0.1.1
 PasteDeploy==1.5.2
 pexpect==4.3.1
 pickleshare==0.7.4
-pkg-resources==0.0.0
 plaster==1.0
+-e .
+marshmallow==2.15.5
 plaster-pastedeploy==0.4.2
 pluggy==0.6.0
 prompt-toolkit==1.0.15
@@ -47,7 +47,8 @@ python-editor==1.0.3
 repoze.lru==0.7
 simplegeneric==0.8.1
 six==1.11.0
-SQLAlchemy==1.1.15
+SQLAlchemy==1.2.11
+psycopg2==2.7.5
 text-unidecode==1.1
 traitlets==4.3.2
 transaction==2.1.2

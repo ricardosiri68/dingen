@@ -3,10 +3,6 @@ import os
 from setuptools import setup, find_packages
 
 here = os.path.abspath(os.path.dirname(__file__))
-with open(os.path.join(here, 'README.md')) as f:
-    README = f.read()
-with open(os.path.join(here, 'CHANGES.txt')) as f:
-    CHANGES = f.read()
 
 requires = [
     'plaster_pastedeploy',
@@ -28,10 +24,9 @@ tests_require = [
 ]
 
 setup(
-    name='dingen_pyramid',
+    name='dingen',
     version='0.0',
-    description='dingen-pyramid',
-    long_description=README + '\n\n' + CHANGES,
+    description='A Blog made with pyramid',
     classifiers=[
         'Programming Language :: Python',
         'Framework :: Pyramid',
@@ -39,7 +34,7 @@ setup(
         'Topic :: Internet :: WWW/HTTP :: WSGI :: Application',
     ],
     author='',
-    author_email='',
+    author_email='ricardosiri68@gmail.com',
     url='',
     keywords='web pyramid pylons',
     packages=find_packages(),
@@ -54,8 +49,7 @@ setup(
             'main = dingen_pyramid:main',
         ],
         'console_scripts': [
-            'initialize_dingen_pyramid_db = dingen_pyramid.scripts.initializedb:main',
-            'dbseeder = dingen_pyramid.scripts.dbseeder:main',
+            'initialize_dingen_pyramid_db = dingen.scripts.initializedb:main',
         ],
     },
 )
